@@ -94,4 +94,7 @@
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Because we need to access photos" />
         <variable name="CAMERA_USAGE_DESCRIPTION" value=" " />
     </plugin>
+    <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
+        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value=" " />
+    </plugin>
 </widget>
