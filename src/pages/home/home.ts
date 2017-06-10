@@ -1,8 +1,8 @@
 import { ItemDetailsPage } from './../item-details/item-details';
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController, ModalController, Platform } from 'ionic-angular';
 
- 
+import { AppVersion } from '@ionic-native/app-version';
 
 @Component({
   selector: 'page-home',
@@ -18,9 +18,15 @@ items = [
 
   constructor(
     public navCtrl: NavController,
-    private modalCtrl: ModalController) {
-
+    private modalCtrl: ModalController,
+    platform: Platform
+  ) {
+      platform.ready().then(() => {
+ console.log("Version",AppVersion.getSupportedPlatforms());
+});
   }
+
+
 selectItem(item){
   this.modalCtrl.create(ItemDetailsPage, { item: item }).present();
 }
