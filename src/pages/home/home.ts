@@ -10,7 +10,12 @@ import { NavController, ModalController } from 'ionic-angular';
 })
 export class HomePage {
 
-items = [ 'Item1', 'Item2', 'Item3'];
+items = [
+   { description:'Item1'},
+   { description:'Item2'},
+   { description:'Item3'}
+];
+
   constructor(
     public navCtrl: NavController,
     private modalCtrl: ModalController) {
