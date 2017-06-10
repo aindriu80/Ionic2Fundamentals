@@ -1,5 +1,8 @@
+import { ItemDetailsPage } from './../item-details/item-details';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
+ 
 
 @Component({
   selector: 'page-home',
@@ -11,7 +14,7 @@ items = [ 'Item1', 'Item2', 'Item3'];
   constructor(public navCtrl: NavController) {
 
   }
-click() {
-  console.log("Button was clicked");
+selectItem(item){
+  this.navCtrl.push(ItemDetailsPage, { item: item });
 }
 }
