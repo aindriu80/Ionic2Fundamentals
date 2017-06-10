@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavParams } from 'ionic-angular';
+import { NavParams, ViewController } from 'ionic-angular';
 @Component({
     templateUrl: 'item-details.html'
 })
@@ -8,7 +8,18 @@ import { NavParams } from 'ionic-angular';
 export class ItemDetailsPage {
 item;
 
-constructor(NavParams: NavParams){
+constructor(NavParams: NavParams,
+private viewCtrl: ViewController ){
+
     this.item = NavParams.get('item');
 }
+
+cancel() {
+this.viewCtrl.dismiss();
+}
+
+done() {
+this.viewCtrl.dismiss();
+}
+
 }
