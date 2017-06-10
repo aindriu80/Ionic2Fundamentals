@@ -4,6 +4,7 @@ import { NavController, ModalController, Platform } from 'ionic-angular';
 
 import { AppVersion } from '@ionic-native/app-version';
 
+import { Camera, CameraOptions } from '@ionic-native/camera';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
