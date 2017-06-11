@@ -25,13 +25,13 @@ items = [
   constructor(
     public navCtrl: NavController,
     private modalCtrl: ModalController,
-    private camera: Camera,
+  
     platform: Platform
   ) {
       platform.ready().then(() => {
         let map = new GoogleMap('map')
         Geolocation.getSupportedPlatforms()
-        Camera.getSupportedPlatforms()
+       
  console.log("Version",AppVersion.getSupportedPlatforms());
 });
   }
